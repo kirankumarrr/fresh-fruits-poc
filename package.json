@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "jest --watchAll",
     "start": "node server.js",
     "coverage": "jest --coverage",
     "build": "parcel build src/index.html",
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
