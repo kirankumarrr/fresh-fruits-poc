@@ -1,0 +1,45 @@
+/* Media Queries */
+@media (max-width: 500px) {
+  .surveyHeader h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .surveyStartBody .subHeading {
+    font-size: 2.75rem;
+  }
+  .headingQuestion {
+    font-size: 1.75rem;
+  }
+  .wrapper {
+    height: 100vh;
+    padding: 30px 20px;
+  }
+  .questionsWrapper {
+    width: 100%;
+  }
+  .textareaForm {
+    width: 240px;
+  }
+  .textareaForm textarea {
+    width: 240px;
+    height: 180px;
+  }
+  .surveyBody {
+    height: calc(100% - 50px);
+    padding-top: 20px;
+  }
+  .headingEnding {
+    font-size: 1.75rem;
+  }
+  .subHeadingEnding {
+    font-size: 1rem;
+  }
+
+  .survey .subHeading svg {
+    width: 100px;
+    vertical-align: sub;
+  }
+  .surveyStartBody .description {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Freshworks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --watchAll",
+    "start": "node server.js",
+    "coverage": "jest --coverage",
+    "build": "parcel build src/index.html",
+    "dev": "parcel src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^8.2.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "esbuild": "^0.12.23",
+    "jest": "^27.0.6",
+    "jsdom": "^17.0.0",
+    "parcel-bundler": "^1.12.5"
+  }
+}
