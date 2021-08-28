@@ -127,6 +127,7 @@ function submit(event) {
   checkHasErrors();
 
   if (Object.keys(collectResponse).length === questions.length) {
+    document.getElementById('btnSubmit').setAttribute('disabled', 'disabled');
     postData(collectResponse);
   }
 }
@@ -372,11 +373,13 @@ const postData = async (data) => {
       formErrors = {};
       localStorage.removeItem(localStorageKey);
       document.getElementById('errorSubmitElement').classList.add('hide');
+      document.getElementById('btnSubmit').removeAttribute('disabled');
     }
   } catch (error) {
     const getErrorElement = document.getElementById('errorSubmitElement');
     getErrorElement.classList.remove('hide');
     getErrorElement.innerHTML = 'Error on post';
+    document.getElementById('btnSubmit').removeAttribute('disabled');
   }
 };
 const svgRadioButton = `<?xml version="1.0" encoding="UTF-8"?><svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
