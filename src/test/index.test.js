@@ -210,6 +210,24 @@ describe('Comments question page', () => {
     fireEvent.change(commentsTextarea, { target: { value: 'test' } });
     fireEvent.click(btnSubmit);
     expect(fetch).toHaveBeenCalledTimes(1);
+    const payloadData = {
+      deliveryExperience: { points: '10', text: 'Great' },
+      freshnessFruits: { points: '10', text: 'Great' },
+      orderAgain: true,
+      comments: 'test',
+    };
+
+    expect(fetch).toHaveBeenCalledWith(
+      'https://60b0c06a1f26610017fff217.mockapi.io/api/users/survey',
+      {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payloadData),
+      }
+    );
     await waitFor(() => {
       expect(surveyStart).toHaveClass('hide');
       expect(surveyBody).toHaveClass('hide');
